@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Weather Text -->
+    <TextView
+        android:id="@+id/tview_weather"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_black"
+        android:text="@string/lbl_current_weather"
+        android:textSize="@dimen/text_thirty"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Latitude Text -->
+    <TextView
+        android:id="@+id/tview_latitude_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_latitude"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_latitude_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather"/>
+
+    <!-- Latitude Value -->
+    <TextView
+        android:id="@+id/tview_latitude_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_latitude_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_latitude_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather"/>
+
+    <!-- Longitude Text -->
+    <TextView
+        android:id="@+id/tview_longitude_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_longitude"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_longitude_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_latitude_text"/>
+
+    <!-- Longitude Value -->
+    <TextView
+        android:id="@+id/tview_longitude_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_longitude_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_longitude_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_latitude_text"/>
+
+    <!-- Country Text -->
+    <TextView
+        android:id="@+id/tview_country_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_country"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_country_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_longitude_text"/>
+
+    <!-- Country Value -->
+    <TextView
+        android:id="@+id/tview_country_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_country_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_country_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_longitude_text"/>
+
+    <!-- Description Text -->
+    <TextView
+        android:id="@+id/tview_description_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_description"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_description_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_country_text"/>
+
+    <!-- Description Value -->
+    <TextView
+        android:id="@+id/tview_description_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_description_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_description_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_country_text"/>
+
+    <!-- Temperature Text -->
+    <TextView
+        android:id="@+id/tview_temperature_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_temperature"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_temperature_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_description_text"/>
+
+    <!-- Temperature Value -->
+    <TextView
+        android:id="@+id/tview_temperature_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_temperature_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_temperature_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_description_text"/>
+
+    <!-- Humidity Text -->
+    <TextView
+        android:id="@+id/tview_humidity_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_humidity"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_humidity_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_temperature_text"/>
+
+    <!-- Humidity Value -->
+    <TextView
+        android:id="@+id/tview_humidity_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_humidity_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_humidity_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_temperature_text"/>
+
+    <!-- Temperature Minimum Text -->
+    <TextView
+        android:id="@+id/tview_temperature_minimum_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_temperature_minimum"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_temperature_minimum_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_humidity_text"/>
+
+    <!-- Temperature Minimum Value -->
+    <TextView
+        android:id="@+id/tview_temperature_minimum_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_temperature_minimum_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_temperature_minimum_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_humidity_text"/>
+
+    <!-- Temperature Maximum Text -->
+    <TextView
+        android:id="@+id/tview_temperature_maximum_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_temperature_maximum"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_temperature_maximum_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_temperature_minimum_text"/>
+
+    <!-- Temperature Maximum Value -->
+    <TextView
+        android:id="@+id/tview_temperature_maximum_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_temperature_maximum_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_temperature_maximum_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_temperature_minimum_text"/>
+
+    <!-- Speed Text -->
+    <TextView
+        android:id="@+id/tview_speed_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_speed"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_speed_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_temperature_maximum_text"/>
+
+    <!-- Speed Value -->
+    <TextView
+        android:id="@+id/tview_speed_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_speed_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_speed_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_temperature_maximum_text"/>
+
+    <!-- Degree Text -->
+    <TextView
+        android:id="@+id/tview_degree_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_degree"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_degree_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_speed_text"/>
+
+    <!-- Degree Value -->
+    <TextView
+        android:id="@+id/tview_degree_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_degree_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_degree_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_speed_text"/>
+
+    <!-- Date / Time Text -->
+    <TextView
+        android:id="@+id/tview_date_time_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_date_time"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_date_time_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_degree_text"/>
+
+    <!-- Date / Time Value -->
+    <TextView
+        android:id="@+id/tview_date_time_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_date_time_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_date_time_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_degree_text"/>
+
+    <!-- Name Text -->
+    <TextView
+        android:id="@+id/tview_name_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_name"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_name_value"
+        app:layout_constraintTop_toBottomOf="@+id/tview_date_time_text"/>
+
+    <!-- Name Value -->
+    <TextView
+        android:id="@+id/tview_name_value"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_grey"
+        android:text="@string/lbl_name_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_date_time_text"/>
+
+</android.support.constraint.ConstraintLayout>
