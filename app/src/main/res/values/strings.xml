@@ -28,4 +28,34 @@
     <string name="lbl_name">Name</string>
     <string name="lbl_name_value">San Diego</string>
 
+    <!-- Weather -->
+    <string name="lbl_weather_name">San Diego</string>
+    <string name="lbl_weather_description">Moderate Rain</string>
+    <string name="lbl_weather_temp">80°</string>
+    <string name="lbl_weather_date">Nov 9, 2018 2:00:00 PM</string>
+    <string name="lbl_weather_now_text">Now</string>
+    <string name="lbl_weather_icon">Icon</string>
+    <string name="lbl_weather_humidity_text">Humidity</string>
+    <string name="lbl_weather_pressure_text">Pressure</string>
+    <string name="lbl_weather_humidity">12%</string>
+    <string name="lbl_weather_pressure">1014 hPA</string>
+
+    <string name="btn_change_city">Change City</string>
+
+    <!-- Weather Dialog -->
+    <string name="weather_search_title">Search</string>
+    <string name="weather_search_text">Change City</string>
+    <string name="weather_search_hint">Enter City Name</string>
+    <string name="weather_cancel_text">Cancel</string>
+    <string name="weather_change_text">Change</string>
+    <string name="weather_ok_text">Ok</string>
+    <string name="weather_submit_text">Submit</string>
+
+    <!-- Menu -->
+    <string name="action_search">Search</string>
+
+    <!-- Toast -->
+    <string name="toast_no_internet_connection">No Internet Connection</string>
+    <string name="toast_error_check_city">Error, Check City</string>
+
 </resources>

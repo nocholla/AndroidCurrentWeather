@@ -6,7 +6,80 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="grid_layout_margin">16dp</dimen>
+
+    <!-- Photo Gallery -->
+    <dimen name="grid_layout_margin">5dp</dimen>
+
+    <!-- Begin Product Card Section -->
+    <dimen name="item_offset">10dp</dimen>
+    <dimen name="detail_backdrop_height">250dp</dimen>
+    <dimen name="backdrop_title">30dp</dimen>
+    <dimen name="backdrop_subtitle">18dp</dimen>
+    <dimen name="card_album_radius">0dp</dimen>
+    <dimen name="album_cover_height">160dp</dimen>
+    <dimen name="product_card_padding">10dp</dimen>
+    <dimen name="product_card_name">15dp</dimen>
+    <dimen name="product_card_padding_bottom">5dp</dimen>
+    <dimen name="product_card_category">12dp</dimen>
+    <dimen name="product_card_price">12dp</dimen>
+    <dimen name="ic_album_overflow_width">20dp</dimen>
+    <dimen name="ic_album_overflow_height">30dp</dimen>
+    <dimen name="ic_album_overflow_margin_top">10dp</dimen>
+    <!-- End Product Card Section -->
+
+    <!-- Begin Product List Item Section -->
+    <dimen name="product_list_thumbnail">90dp</dimen>
+    <!-- End Product List Item Section -->
+
+    <!-- Begin Product List Section -->
+    <dimen name="padding_list_row">16dp</dimen>
+    <dimen name="messages_padding_left">72dp</dimen>
+    <dimen name="icon_width_height">40dp</dimen>
+    <dimen name="product_list_name">16sp</dimen>
+    <dimen name="product_list_category">14sp</dimen>
+    <dimen name="icon_star">25dp</dimen>
+    <dimen name="icon_text">22dp</dimen>
+    <dimen name="product_list_price">12dp</dimen>
+    <!-- End Product List Section -->
+
+    <!-- Begin Product Row Item Section -->
+    <dimen name="product_row_thumbnail">40dp</dimen>
+    <dimen name="row_padding">10dp</dimen>
+    <dimen name="product_name">15dp</dimen>
+    <dimen name="product_category">12dp</dimen>
+    <dimen name="product_price">12dp</dimen>
+    <!-- Begin Product Row Item Section -->
+
+    <!-- Begin Card View -->
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="card_radius">0dp</dimen>
+    <!-- Begin Card View -->
+
+    <!-- Begin Facebook View -->
+    <dimen name="feed_item_margin">10dp</dimen>
+    <dimen name="feed_item_padding_bottom">10dp</dimen>
+    <dimen name="feed_item_padding_top">10dp</dimen>
+    <dimen name="feed_item_padding_top_bottom">20dp</dimen>
+    <dimen name="feed_item_padding_left_right">15dp</dimen>
+    <dimen name="feed_item_profile_pic_ten">10dp</dimen>
+    <dimen name="feed_item_profile_pic_twenty">20dp</dimen>
+    <dimen name="feed_item_profile_pic_thirty">30dp</dimen>
+    <dimen name="feed_item_profile_pic_forty">40dp</dimen>
+    <dimen name="feed_item_profile_pic_fifty">50dp</dimen>
+    <dimen name="feed_item_profile_pic_sixty">60dp</dimen>
+    <dimen name="feed_item_profile_pic_seventy">70dp</dimen>
+    <dimen name="feed_item_profile_pic_eighty">80dp</dimen>
+    <dimen name="feed_item_profile_pic_ninety">90dp</dimen>
+    <dimen name="feed_item_profile_pic_hundred">100dp</dimen>
+    <dimen name="feed_item_profile_info_padd">10dp</dimen>
+    <dimen name="feed_item_profile_name">15dp</dimen>
+    <dimen name="feed_item_timestamp">13dp</dimen>
+    <dimen name="feed_item_status_pad_left_right">15dp</dimen>
+    <dimen name="feed_item_status_pad_top">13dp</dimen>
+    <dimen name="feed_item_corner_radius">0dp</dimen>
+    <dimen name="feed_item_border_width">1dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <!-- End Facebook View -->
 
     <!-- Margin -->
     <dimen name="margin_zero">0dp</dimen>
@@ -383,6 +456,8 @@
     <dimen name="text_fourty">40sp</dimen>
     <dimen name="text_fifty">50sp</dimen>
     <dimen name="text_sixty">60sp</dimen>
+    <dimen name="text_seventy">70sp</dimen>
+    <dimen name="text_eighty">80sp</dimen>
 
     <!-- Begin Login Registration -->
     <dimen name="logo_w_h">100dp</dimen>
@@ -431,5 +506,13 @@
     <dimen name="radius_two_hundred">200dp</dimen>
     <dimen name="radius_three_hundred">300dp</dimen>
     <dimen name="radius_four_hundred">400dp</dimen>
+
+    <!-- Google Pay -->
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="margin_large">10dp</dimen>
+    <dimen name="margin_xlarge">30dp</dimen>
+    <dimen name="buy_button_width">300dp</dimen>
+    <dimen name="buy_button_height">48sp</dimen>
+    <dimen name="buy_button_min_width">200dp</dimen>
 
 </resources>

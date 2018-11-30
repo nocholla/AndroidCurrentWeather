@@ -4,8 +4,313 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_blue"
     tools:context=".MainActivity">
 
-    <include layout="@layout/content_main" />
+    <!-- Weather City -->
+    <TextView
+        android:id="@+id/tview_weather_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_name"
+        android:textSize="@dimen/text_thirty"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Weather Description -->
+    <TextView
+        android:id="@+id/tview_weather_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_description"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_name"/>
+
+    <!-- Weather Temp -->
+    <TextView
+        android:id="@+id/tview_weather_temp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_temp"
+        android:textSize="@dimen/text_seventy"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_description"/>
+
+    <!-- Weather Date -->
+    <TextView
+        android:id="@+id/tview_weather_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_thirty"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_date"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_temp"/>
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/horizontal_line_one"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_one"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginBottom="@dimen/margin_five"
+        android:background="@color/line_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_date"/>
+
+    <!-- Weather Now Text -->
+    <TextView
+        android:id="@+id/tview_weather_now_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_now_text"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_one"/>
+
+    <!-- Weather Icon -->
+    <TextView
+        android:id="@+id/tview_weather_icon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_icon"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_now_text"/>
+
+    <!-- Weather Temp Small -->
+    <TextView
+        android:id="@+id/tview_weather_temp_small"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_temp"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_icon"/>
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/horizontal_line_two"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_one"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginBottom="@dimen/margin_five"
+        android:background="@color/line_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_temp_small"/>
+
+    <!-- Weather Humidity Text -->
+    <TextView
+        android:id="@+id/tview_weather_humidity_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_humidity_text"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_pressure_text"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_two"/>
+
+    <!-- Weather Pressure Text -->
+    <TextView
+        android:id="@+id/tview_weather_pressure_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_pressure_text"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_humidity_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_two"/>
+
+    <!-- Weather Humidity -->
+    <TextView
+        android:id="@+id/tview_weather_humidity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_humidity"
+        android:textSize="@dimen/text_twenty_five"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_humidity_text"/>
+
+    <!-- Weather Pressure -->
+    <TextView
+        android:id="@+id/tview_weather_pressure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_weather_pressure"
+        android:textSize="@dimen/text_twenty_five"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_humidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_pressure_text"/>
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/horizontal_line_three"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_one"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginBottom="@dimen/margin_five"
+        android:background="@color/line_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_humidity"/>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_ten"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_three" />
+
+    <!-- Weather Image -->
+    <!--<ImageView-->
+    <!--android:id="@+id/img_create_customer_profile"-->
+    <!--android:layout_width="@dimen/width_eighty"-->
+    <!--android:layout_height="@dimen/height_eighty"-->
+    <!--android:layout_marginTop="@dimen/margin_ten"-->
+    <!--android:layout_marginEnd="@dimen/margin_eight"-->
+    <!--android:layout_marginStart="@dimen/margin_eight"-->
+    <!--android:src="@drawable/cloud"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/tview_weather_temp" />-->
+
+    <!-- Create Customer Profile Button -->
+    <Button
+        android:id="@+id/btn_change_city"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_zero"
+        android:layout_marginLeft="@dimen/margin_zero"
+        android:layout_marginRight="@dimen/margin_zero"
+        android:background="@drawable/button_shaded_radius_zero"
+        android:text="@string/btn_change_city"
+        android:textSize="@dimen/text_fifteen"
+        android:textColor="@color/text_white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
+
