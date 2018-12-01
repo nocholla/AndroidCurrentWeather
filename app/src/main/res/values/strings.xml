@@ -15,9 +15,9 @@
     <string name="lbl_temperature_value">297.77</string>
     <string name="lbl_humidity">Humidity</string>
     <string name="lbl_humidity_value">76%</string>
-    <string name="lbl_temperature_minimum">Temperature Minimum</string>
+    <string name="lbl_temperature_minimum">Minimum Temperature </string>
     <string name="lbl_temperature_minimum_value">297.77</string>
-    <string name="lbl_temperature_maximum">Temperature Maximum</string>
+    <string name="lbl_temperature_maximum">Maximum Temperature</string>
     <string name="lbl_temperature_maximum_value">300.15</string>
     <string name="lbl_speed">Speed</string>
     <string name="lbl_speed_value">1.5</string>
@@ -29,7 +29,7 @@
     <string name="lbl_name_value">San Diego</string>
     <string name="lbl_pressure">Pressure</string>
     <string name="lbl_pressure_value">1014 hPA</string>
-    <string name="lbl_weather_date">Nov 9, 2018 2:00:00 PM</string>
+    <string name="lbl_weather_date">Nov 9, 2018</string>
 
     <!-- Weather -->
     <string name="lbl_weather_name">San Diego</string>

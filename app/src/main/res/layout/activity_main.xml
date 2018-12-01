@@ -410,6 +410,90 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tview_weather_speed"/>
 
+    <!-- Weather Minimum Temperature Text -->
+    <TextView
+        android:id="@+id/tview_weather_temperature_minimum_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_temperature_minimum"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_temperature_maximum_text"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_four"/>
+
+    <!-- Weather Maximum Temperature Text -->
+    <TextView
+        android:id="@+id/tview_weather_temperature_maximum_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_temperature_maximum"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_temperature_minimum_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_four"/>
+
+    <!-- Weather Minimum Temperature Value -->
+    <TextView
+        android:id="@+id/tview_weather_temperature_minimum"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_speed_value"
+        android:textSize="@dimen/text_twenty_five"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_temperature_maximum"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_temperature_minimum_text"/>
+
+    <!-- Weather Maximum Temperature Value -->
+    <TextView
+        android:id="@+id/tview_weather_temperature_maximum"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_temperature_maximum_value"
+        android:textSize="@dimen/text_twenty_five"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_temperature_minimum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_temperature_maximum_text"/>
+
     <!-- Progress Bar -->
     <ProgressBar
         android:id="@+id/progress_bar_weather"
@@ -419,19 +503,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontal_line_three" />
-
-    <!-- Weather Image -->
-    <!--<ImageView-->
-    <!--android:id="@+id/img_create_customer_profile"-->
-    <!--android:layout_width="@dimen/width_eighty"-->
-    <!--android:layout_height="@dimen/height_eighty"-->
-    <!--android:layout_marginTop="@dimen/margin_ten"-->
-    <!--android:layout_marginEnd="@dimen/margin_eight"-->
-    <!--android:layout_marginStart="@dimen/margin_eight"-->
-    <!--android:src="@drawable/cloud"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/tview_weather_temp" />-->
 
     <!-- Create Customer Profile Button -->
     <Button

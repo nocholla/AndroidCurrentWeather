@@ -41,13 +41,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView tviewWeatherPressure;
     private TextView tviewWeatherSpeed;
     private TextView tviewWeatherDegree;
-
-
-    //private TextView tviewWeatherIcon;
-
-
     private TextView tviewWeatherTemperatureMininimum;
     private TextView tviewWeatherTemperatureMaximum;
+    //private TextView tviewWeatherIcon;
 
     // Progress Bar
     private ProgressBar progressBar;
@@ -80,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Widgets
-        // Widgets
         btnChangeCity = findViewById(R.id.btn_change_city);
 
         tviewWeatherName = findViewById(R.id.tview_weather_name);
@@ -94,27 +89,9 @@ public class MainActivity extends AppCompatActivity {
         tviewWeatherPressure = findViewById(R.id.tview_weather_pressure);
         tviewWeatherSpeed = findViewById(R.id.tview_weather_speed);
         tviewWeatherDegree = findViewById(R.id.tview_weather_degree);
-
-
-
-
-
-
-
-
+        tviewWeatherTemperatureMininimum = findViewById(R.id.tview_weather_temperature_minimum);
+        tviewWeatherTemperatureMaximum = findViewById(R.id.tview_weather_temperature_maximum);
         //tviewWeatherIcon = findViewById(R.id.tview_weather_icon);
-
-
-
-
-//        btnChangeCity = findViewById(R.id.btn_change_city);
-//        tviewWeatherName = findViewById(R.id.tview_weather_name);
-//        tviewWeatherDescription = findViewById(R.id.tview_weather_description);
-//        tviewWeatherTemperature = findViewById(R.id.tview_weather_temp);
-//        tviewWeatherDate = findViewById(R.id.tview_weather_date);
-//        tviewWeatherIcon = findViewById(R.id.tview_weather_icon);
-//        tviewWeatherHumidity = findViewById(R.id.tview_weather_humidity);
-//        tviewWeatherPressure = findViewById(R.id.tview_weather_pressure);
 
         // Progress Bar
         progressBar = findViewById(R.id.progress_bar_weather);
@@ -271,14 +248,8 @@ public class MainActivity extends AppCompatActivity {
                     tviewWeatherPressure.setText(main.getString("pressure") + " hPa");
                     tviewWeatherSpeed.setText(wind.getString("speed") + "mph");
                     tviewWeatherDegree.setText(wind.getString("deg") + "°");
-
-
-
-                    //tviewWeatherTemperatureMininimum.setText(String.format("%.2f", main.get("temp_min")) + "°");
-                    //tviewWeatherTemperatureMaximum.setText(String.format("%.2f", main.get("temp_max")) + "°");
-
-
-
+                    tviewWeatherTemperatureMininimum.setText(String.format("%.2f", main.get("temp_min")) + "°");
+                    tviewWeatherTemperatureMaximum.setText(String.format("%.2f", main.get("temp_max")) + "°");
 
 //                    tviewWeatherIcon.setText(Html.fromHtml(WeatherUtil.setWeatherIcon(weatherJSONArray.getInt("id"),
 //                            weatherJSONObject.getJSONObject("sys").getLong("sunrise") * 1000,
