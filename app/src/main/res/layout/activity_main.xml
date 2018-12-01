@@ -504,22 +504,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontal_line_three" />
 
-    <!-- Create Customer Profile Button -->
-    <Button
-        android:id="@+id/btn_change_city"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_zero"
-        android:layout_marginLeft="@dimen/margin_zero"
-        android:layout_marginRight="@dimen/margin_zero"
-        android:background="@drawable/button_shaded_radius_zero"
-        android:text="@string/btn_change_city"
-        android:textSize="@dimen/text_fifteen"
-        android:textColor="@color/text_white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
 </android.support.constraint.ConstraintLayout>
 

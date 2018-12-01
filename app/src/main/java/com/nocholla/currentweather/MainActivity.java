@@ -28,8 +28,6 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     // Widgets
-    private Button btnChangeCity;
-
     private TextView tviewWeatherName;
     private TextView tviewWeatherDescription;
     private TextView tviewWeatherTemperature;
@@ -76,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Widgets
-        btnChangeCity = findViewById(R.id.btn_change_city);
-
         tviewWeatherName = findViewById(R.id.tview_weather_name);
         tviewWeatherDescription = findViewById(R.id.tview_weather_description);
         tviewWeatherTemperature = findViewById(R.id.tview_weather_temp);
@@ -102,62 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Get City
         getCity(city);
-
-        // Change City Button
-        btnChangeCity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Open Dialog
-                openInputDialog();
-            }
-        });
-
-    }
-
-    /**
-     * @method openInputDialog
-     */
-    public void openInputDialog() {
-        alertDialogBuilder = new android.support.v7.app.AlertDialog.Builder(this);
-
-        View view = getLayoutInflater().inflate(R.layout.dialog_view, null);
-
-        // Edit City
-        final EditText editTxtSearchCity = view.findViewById(R.id.edittxt_weather_search);
-        editTxtSearchCity.setText(city);
-
-        // Button Cancel
-        Button btnCancel = view.findViewById(R.id.btn_weather_cancel);
-
-        // Button Submit
-        Button btnSubmit = view.findViewById(R.id.btn_weather_submit);
-
-        alertDialogBuilder.setView(view);
-        dialog = alertDialogBuilder.create();
-        dialog.show();
-
-        // Cancel
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
-            }
-        });
-
-        // Submit
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!editTxtSearchCity.getText().toString().isEmpty()) {
-                    city = editTxtSearchCity.getText().toString();
-
-                    // Get City
-                    getCity(city);
-                }
-
-                dialog.dismiss();
-            }
-        });
 
     }
 
