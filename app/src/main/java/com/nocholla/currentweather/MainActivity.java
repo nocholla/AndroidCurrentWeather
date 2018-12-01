@@ -29,14 +29,25 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
     // Widgets
     private Button btnChangeCity;
+
     private TextView tviewWeatherName;
     private TextView tviewWeatherDescription;
-    private TextView tviewWeatherTemp;
+    private TextView tviewWeatherTemperature;
     private TextView tviewWeatherDate;
-    private TextView tviewWeatherIcon;
-    private TextView tviewWeatherTempSmall;
+    private TextView tviewWeatherCountry;
+    private TextView tviewWeatherLatitude;
+    private TextView tviewWeatherLongitude;
     private TextView tviewWeatherHumidity;
     private TextView tviewWeatherPressure;
+    private TextView tviewWeatherSpeed;
+    private TextView tviewWeatherDegree;
+
+
+    //private TextView tviewWeatherIcon;
+
+
+    private TextView tviewWeatherTemperatureMininimum;
+    private TextView tviewWeatherTemperatureMaximum;
 
     // Progress Bar
     private ProgressBar progressBar;
@@ -69,22 +80,48 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Widgets
+        // Widgets
         btnChangeCity = findViewById(R.id.btn_change_city);
+
         tviewWeatherName = findViewById(R.id.tview_weather_name);
         tviewWeatherDescription = findViewById(R.id.tview_weather_description);
-        tviewWeatherTemp = findViewById(R.id.tview_weather_temp);
+        tviewWeatherTemperature = findViewById(R.id.tview_weather_temp);
         tviewWeatherDate = findViewById(R.id.tview_weather_date);
-        tviewWeatherIcon = findViewById(R.id.tview_weather_icon);
-        tviewWeatherTempSmall = findViewById(R.id.tview_weather_temp_small);
+        tviewWeatherCountry = findViewById(R.id.tview_weather_country);
+        tviewWeatherLatitude = findViewById(R.id.tview_weather_latitude);
+        tviewWeatherLongitude = findViewById(R.id.tview_weather_longitude);
         tviewWeatherHumidity = findViewById(R.id.tview_weather_humidity);
         tviewWeatherPressure = findViewById(R.id.tview_weather_pressure);
+        tviewWeatherSpeed = findViewById(R.id.tview_weather_speed);
+        tviewWeatherDegree = findViewById(R.id.tview_weather_degree);
+
+
+
+
+
+
+
+
+        //tviewWeatherIcon = findViewById(R.id.tview_weather_icon);
+
+
+
+
+//        btnChangeCity = findViewById(R.id.btn_change_city);
+//        tviewWeatherName = findViewById(R.id.tview_weather_name);
+//        tviewWeatherDescription = findViewById(R.id.tview_weather_description);
+//        tviewWeatherTemperature = findViewById(R.id.tview_weather_temp);
+//        tviewWeatherDate = findViewById(R.id.tview_weather_date);
+//        tviewWeatherIcon = findViewById(R.id.tview_weather_icon);
+//        tviewWeatherHumidity = findViewById(R.id.tview_weather_humidity);
+//        tviewWeatherPressure = findViewById(R.id.tview_weather_pressure);
 
         // Progress Bar
         progressBar = findViewById(R.id.progress_bar_weather);
 
         // Fonts
-        weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weathericons-regular-webfont.ttf");
-        tviewWeatherIcon.setTypeface(weatherFont);
+        //weatherFont = Typeface.createFromAsset(getAssets(), "fonts/weathericons-regular-webfont.ttf");
+        //tviewWeatherIcon.setTypeface(weatherFont);
 
         // Get City
         getCity(city);
@@ -208,21 +245,44 @@ public class MainActivity extends AppCompatActivity {
                     // Weather JSON Array
                     JSONObject weatherJSONArray = weatherJSONObject.getJSONArray("weather").getJSONObject(0);
 
+                    // Coord JSON Object
+                    JSONObject coord = weatherJSONObject.getJSONObject("coord");
+
+                    // Main JSON Object
                     JSONObject main = weatherJSONObject.getJSONObject("main");
+
+                    // Wind JSON Object
+                    JSONObject wind = weatherJSONObject.getJSONObject("wind");
+
+                    // Sys JSON Object
+                    JSONObject sys = weatherJSONObject.getJSONObject("sys");
 
                     // Format Date
                     DateFormat df = DateFormat.getDateInstance();
 
-                    tviewWeatherName.setText(weatherJSONObject.getString("name") + ", " + weatherJSONObject.getJSONObject("sys").getString("country"));
+                    tviewWeatherName.setText(weatherJSONObject.getString("name"));
                     tviewWeatherDescription.setText(weatherJSONArray.getString("description"));
-                    tviewWeatherTemp.setText(String.format("%.2f", main.getDouble("temp")) + "°");
+                    tviewWeatherTemperature.setText(String.format("%.2f", main.get("temp")) + "°");
                     tviewWeatherDate.setText(df.format(new Date(weatherJSONObject.getLong("dt") * 1000)));
-                    tviewWeatherIcon.setText(Html.fromHtml(WeatherUtil.setWeatherIcon(weatherJSONArray.getInt("id"),
-                            weatherJSONObject.getJSONObject("sys").getLong("sunrise") * 1000,
-                            weatherJSONObject.getJSONObject("sys").getLong("sunset") * 1000)));
-                    tviewWeatherTempSmall.setText(String.format("%.2f", main.get("temp")) + "°");
+                    tviewWeatherCountry.setText(sys.getString("country"));
+                    tviewWeatherLatitude.setText(coord.getString("lat") + "°");
+                    tviewWeatherLongitude.setText(coord.getString("lon") + "°");
                     tviewWeatherHumidity.setText(main.getString("humidity") + "%");
                     tviewWeatherPressure.setText(main.getString("pressure") + " hPa");
+                    tviewWeatherSpeed.setText(wind.getString("speed") + "mph");
+                    tviewWeatherDegree.setText(wind.getString("deg") + "°");
+
+
+
+                    //tviewWeatherTemperatureMininimum.setText(String.format("%.2f", main.get("temp_min")) + "°");
+                    //tviewWeatherTemperatureMaximum.setText(String.format("%.2f", main.get("temp_max")) + "°");
+
+
+
+
+//                    tviewWeatherIcon.setText(Html.fromHtml(WeatherUtil.setWeatherIcon(weatherJSONArray.getInt("id"),
+//                            weatherJSONObject.getJSONObject("sys").getLong("sunrise") * 1000,
+//                            weatherJSONObject.getJSONObject("sys").getLong("sunset") * 1000)));
 
                     // Progress Bar
                     progressBar.setVisibility(View.GONE);
@@ -245,3 +305,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+/*
+{
+    "coord": {
+        "lon": 72.85,
+        "lat": 19.01
+    },
+    "weather": [
+        {
+        "id": 711,
+        "main": "Smoke",
+        "description": "smoke",
+        "icon": "50n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 300.15,
+        "pressure": 1014,
+        "humidity": 54,
+        "temp_min": 300.15,
+        "temp_max": 300.15
+    },
+    "visibility": 2100,
+    "wind": {
+        "speed": 1.5,
+        "deg": 150
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1543519800,
+    "sys": {
+        "type": 1,
+        "id": 9052,
+        "message": 0.0072,
+        "country": "IN",
+        "sunrise": 1543454671,
+        "sunset": 1543494574
+    },
+    "id": 1275339,
+    "name": "Mumbai",
+    "cod": 200
+}
+ */

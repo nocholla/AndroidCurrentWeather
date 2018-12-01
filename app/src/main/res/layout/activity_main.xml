@@ -71,7 +71,7 @@
     <!-- Weather Date -->
     <TextView
         android:id="@+id/tview_weather_date"
-        android:layout_width="fill_parent"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_thirty"
         android:layout_marginLeft="@dimen/margin_eight"
@@ -86,6 +86,27 @@
         android:paddingLeft="@dimen/padding_five"
         android:paddingRight="@dimen/padding_five"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_country"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_temp"/>
+
+    <!-- Weather Country -->
+    <TextView
+        android:id="@+id/tview_weather_country"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_thirty"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_country_value"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tview_weather_temp"/>
 
@@ -101,10 +122,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tview_weather_date"/>
 
-    <!-- Weather Now Text -->
+    <!-- Weather Latitude Text -->
     <TextView
-        android:id="@+id/tview_weather_now_text"
-        android:layout_width="fill_parent"
+        android:id="@+id/tview_weather_latitude_text"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_five"
         android:layout_marginLeft="@dimen/margin_eight"
@@ -112,57 +133,78 @@
         android:layout_marginStart="@dimen/margin_eight"
         android:layout_marginEnd="@dimen/margin_eight"
         android:textColor="@color/text_white"
-        android:text="@string/lbl_weather_now_text"
+        android:text="@string/lbl_latitude"
         android:textSize="@dimen/text_twelve"
         android:textAlignment="textStart"
+        android:textAllCaps="true"
         android:gravity="start"
         android:paddingLeft="@dimen/padding_five"
         android:paddingRight="@dimen/padding_five"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_pressure_text"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_one"/>
+
+    <!-- Weather Longitude Text -->
+    <TextView
+        android:id="@+id/tview_weather_longitude_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_longitude"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_humidity_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontal_line_one"/>
 
-    <!-- Weather Icon -->
+    <!-- Weather Latitude Value -->
     <TextView
-        android:id="@+id/tview_weather_icon"
-        android:layout_width="fill_parent"
+        android:id="@+id/tview_weather_latitude"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_ten"
         android:layout_marginLeft="@dimen/margin_eight"
         android:layout_marginRight="@dimen/margin_eight"
         android:layout_marginStart="@dimen/margin_eight"
         android:layout_marginEnd="@dimen/margin_eight"
         android:textColor="@color/text_white"
-        android:text="@string/lbl_weather_icon"
-        android:textSize="@dimen/text_sixteen"
+        android:text="@string/lbl_latitude_value"
+        android:textSize="@dimen/text_twenty_five"
         android:textAlignment="textStart"
         android:gravity="start"
         android:paddingLeft="@dimen/padding_five"
         android:paddingRight="@dimen/padding_five"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tview_weather_now_text"/>
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_latitude_text"/>
 
-    <!-- Weather Temp Small -->
+    <!-- Weather Longitude Value -->
     <TextView
-        android:id="@+id/tview_weather_temp_small"
-        android:layout_width="fill_parent"
+        android:id="@+id/tview_weather_longitude"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_ten"
         android:layout_marginLeft="@dimen/margin_eight"
         android:layout_marginRight="@dimen/margin_eight"
         android:layout_marginStart="@dimen/margin_eight"
         android:layout_marginEnd="@dimen/margin_eight"
         android:textColor="@color/text_white"
-        android:text="@string/lbl_weather_temp"
-        android:textSize="@dimen/text_sixteen"
+        android:text="@string/lbl_longitude_value"
+        android:textSize="@dimen/text_twenty_five"
         android:textAlignment="textStart"
         android:gravity="start"
         android:paddingLeft="@dimen/padding_five"
         android:paddingRight="@dimen/padding_five"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_humidity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tview_weather_icon"/>
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_longitude_text"/>
 
     <!-- Horizontal Line -->
     <View
@@ -174,12 +216,12 @@
         android:background="@color/line_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tview_weather_temp_small"/>
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_latitude"/>
 
     <!-- Weather Humidity Text -->
     <TextView
         android:id="@+id/tview_weather_humidity_text"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_five"
         android:layout_marginLeft="@dimen/margin_eight"
@@ -187,7 +229,7 @@
         android:layout_marginStart="@dimen/margin_eight"
         android:layout_marginEnd="@dimen/margin_eight"
         android:textColor="@color/text_white"
-        android:text="@string/lbl_weather_humidity_text"
+        android:text="@string/lbl_humidity"
         android:textSize="@dimen/text_twelve"
         android:textAlignment="textStart"
         android:textAllCaps="true"
@@ -201,7 +243,7 @@
     <!-- Weather Pressure Text -->
     <TextView
         android:id="@+id/tview_weather_pressure_text"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_five"
         android:layout_marginLeft="@dimen/margin_eight"
@@ -209,7 +251,7 @@
         android:layout_marginStart="@dimen/margin_eight"
         android:layout_marginEnd="@dimen/margin_eight"
         android:textColor="@color/text_white"
-        android:text="@string/lbl_weather_pressure_text"
+        android:text="@string/lbl_pressure"
         android:textSize="@dimen/text_twelve"
         android:textAlignment="textStart"
         android:textAllCaps="true"
@@ -220,17 +262,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontal_line_two"/>
 
-    <!-- Weather Humidity -->
+    <!-- Weather Humidity Value -->
     <TextView
         android:id="@+id/tview_weather_humidity"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_eight"
         android:layout_marginRight="@dimen/margin_eight"
         android:layout_marginStart="@dimen/margin_eight"
         android:layout_marginEnd="@dimen/margin_eight"
         android:textColor="@color/text_white"
-        android:text="@string/lbl_weather_humidity"
+        android:text="@string/lbl_humidity_value"
         android:textSize="@dimen/text_twenty_five"
         android:textAlignment="textStart"
         android:gravity="start"
@@ -240,17 +282,17 @@
         app:layout_constraintEnd_toStartOf="@+id/tview_weather_pressure"
         app:layout_constraintTop_toBottomOf="@+id/tview_weather_humidity_text"/>
 
-    <!-- Weather Pressure -->
+    <!-- Weather Pressure Value -->
     <TextView
         android:id="@+id/tview_weather_pressure"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/layout_width_zero"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_eight"
         android:layout_marginRight="@dimen/margin_eight"
         android:layout_marginStart="@dimen/margin_eight"
         android:layout_marginEnd="@dimen/margin_eight"
         android:textColor="@color/text_white"
-        android:text="@string/lbl_weather_pressure"
+        android:text="@string/lbl_pressure_value"
         android:textSize="@dimen/text_twenty_five"
         android:textAlignment="textStart"
         android:gravity="start"
@@ -271,6 +313,102 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tview_weather_humidity"/>
+
+    <!-- Weather Speed Text -->
+    <TextView
+        android:id="@+id/tview_weather_speed_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_speed"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_degree_text"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_three"/>
+
+    <!-- Weather Degree Text -->
+    <TextView
+        android:id="@+id/tview_weather_degree_text"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_degree"
+        android:textSize="@dimen/text_twelve"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_speed_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line_three"/>
+
+    <!-- Weather Speed Value -->
+    <TextView
+        android:id="@+id/tview_weather_speed"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_speed_value"
+        android:textSize="@dimen/text_twenty_five"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tview_weather_degree"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_speed_text"/>
+
+    <!-- Weather Degree Value -->
+    <TextView
+        android:id="@+id/tview_weather_degree"
+        android:layout_width="@dimen/layout_width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_degree_value"
+        android:textSize="@dimen/text_twenty_five"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toEndOf="@+id/tview_weather_speed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_degree_text"/>
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/horizontal_line_four"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_one"
+        android:layout_marginTop="@dimen/margin_five"
+        android:layout_marginBottom="@dimen/margin_five"
+        android:background="@color/line_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_weather_speed"/>
 
     <!-- Progress Bar -->
     <ProgressBar

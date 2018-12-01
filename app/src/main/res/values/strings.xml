@@ -8,13 +8,13 @@
     <string name="lbl_longitude">Longitude</string>
     <string name="lbl_longitude_value">138.933334</string>
     <string name="lbl_country">Country</string>
-    <string name="lbl_country_value">JP</string>
+    <string name="lbl_country_value">US</string>
     <string name="lbl_description">Description</string>
     <string name="lbl_description_value">Broken clouds</string>
     <string name="lbl_temperature">Temperature</string>
     <string name="lbl_temperature_value">297.77</string>
     <string name="lbl_humidity">Humidity</string>
-    <string name="lbl_humidity_value">76</string>
+    <string name="lbl_humidity_value">76%</string>
     <string name="lbl_temperature_minimum">Temperature Minimum</string>
     <string name="lbl_temperature_minimum_value">297.77</string>
     <string name="lbl_temperature_maximum">Temperature Maximum</string>
@@ -27,18 +27,20 @@
     <string name="lbl_date_time_value">12-01-2018</string>
     <string name="lbl_name">Name</string>
     <string name="lbl_name_value">San Diego</string>
+    <string name="lbl_pressure">Pressure</string>
+    <string name="lbl_pressure_value">1014 hPA</string>
+    <string name="lbl_weather_date">Nov 9, 2018 2:00:00 PM</string>
 
     <!-- Weather -->
     <string name="lbl_weather_name">San Diego</string>
     <string name="lbl_weather_description">Moderate Rain</string>
     <string name="lbl_weather_temp">80°</string>
-    <string name="lbl_weather_date">Nov 9, 2018 2:00:00 PM</string>
+
     <string name="lbl_weather_now_text">Now</string>
     <string name="lbl_weather_icon">Icon</string>
-    <string name="lbl_weather_humidity_text">Humidity</string>
-    <string name="lbl_weather_pressure_text">Pressure</string>
+
     <string name="lbl_weather_humidity">12%</string>
-    <string name="lbl_weather_pressure">1014 hPA</string>
+
 
     <string name="btn_change_city">Change City</string>
 
